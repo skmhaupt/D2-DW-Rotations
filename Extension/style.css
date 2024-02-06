@@ -1,0 +1,76 @@
+body {
+    background-color: #1d2a35;
+    color: #ddd;
+    margin: 0%;
+}
+
+body:hover {
+    cursor: default;
+}
+
+
+.main_container {
+    height: fit-content;
+    width: 380px;
+}
+
+h2 {
+    background-color: rgb(255, 255, 255, 0.1);
+    margin-top: 10px;
+    padding: 10px 10px 10px 10px;
+}
+
+div {
+    margin-bottom: 8px;
+}
+
+.activity_container {
+    margin: 5px 10px 20px 10px;
+    padding: 10px 8px 10px 8px;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.links_container {
+    margin: 5px 10px 20px 10px;
+    padding: 10px 8px 10px 8px;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin: auto;
+    width: 250px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+}
+
+.section_title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: ridge;
+}
+
+.hide {
+    display: none;
+}
+
+.button {
+    background-color: rgb(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 2px 4px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: blueviolet;
+}
+
+.loot {
+    white-space: pre-line
+}

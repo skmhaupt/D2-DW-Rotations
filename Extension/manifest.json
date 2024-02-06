@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "D2 D&W Rotations",
+    "version": "1.0.0",
+    "description": "Extension for rotating activities in Destiny 2",
+    "author": "Pyoooma",
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "D2 D&W Rotations"
+    }
+}
