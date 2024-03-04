@@ -55,12 +55,12 @@ const raids = [
 
 const dungeons = [
     { name: "Grasp of Avarice", location: "Cosmodrome" },
+    { name: "Prophecy", location: "Legends" },
     { name: "Ghost of the Deep", location: "H.E.L.M." },
     { name: "Duality", location: "Moon" },
     { name: "Spire of the Watcher", location: "Mars" },
     { name: "Pit of Heresy", location: "Moon" },
-    { name: "Shattered Throne", location: "Dreaming City" },
-    { name: "Prophecy", location: "Legends" }
+    { name: "Shattered Throne", location: "Dreaming City" }
 ];
 
 //---------------------------------------------------------
