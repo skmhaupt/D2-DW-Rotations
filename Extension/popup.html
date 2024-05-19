@@ -13,21 +13,41 @@
 
     <div class="main_container">
 
-        <h2>Useful links</h2>
-
         <!-- Useful links -->
-
+        <div class="title">
+            <h2 class="edit">Useful links</h2>
+            <div class="edit button " id="editLinks">Edit</div>
+        </div>
+        
         <div class="links_container" id="useful_links">
-            <div class="button dim" id="dim">DIM</div>
-            <div class="button todayInDestiny" id="todayInDestiny">TodayInDestiny</div>
-            <div class="button d2ArmorPicker" id="d2ArmorPicker">D2ArmorPicker</div>
-            <div class="button lightgg" id="lightgg">Light.gg</div>
-            <div class="button trialsReport" id="trialsReport">Trials Report</div>
-            <div class="button raidReport" id="raidReport">Raid Report</div>
+            <div class="link button"></div>
+            <div class="link button"></div>
+            <div class="link button"></div>
+            <div class="link button"></div>
+            <div class="link button"></div>
+            <div class="link button"></div>
+        </div>
+        
+        <div class="edit_container" id="edit_container">
+            <div class="button editItem right">1</div>
+            <div class="button editItem left">2</div>
+            <div class="button editItem right">3</div>
+            <div class="button editItem left">4</div>
+            <div class="button editItem right">5</div>
+            <div class="button editItem left">6</div>
         </div>
 
+        <div class="edit_link_container" id="edit_link_container">
+            <div class="input center editLinkItem">
+                <label class="label" for="fname">Name:</label>
+                <input class="text" type="text" id="fname" name="fname"><br><br>
+                <label class="label" for="lname">URL:</label>
+                <input class="text" type="text" id="lname" name="lname" value="test"><br><br>
+            </div>
+            <div class="button center editLinkItem" id="applyButton">Apply</div>
+        </div>
 
-        <h2>Currently live in D2</h2>
+        <h2 class="title">Currently live in D2</h2>
 
         <!-- Raids -->
         <div class="activity_container" id="raid">

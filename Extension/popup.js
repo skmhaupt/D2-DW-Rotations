@@ -11,6 +11,30 @@ function daysBetween(d1, d2) {
     return Math.floor((d2.getTime() - d1.getTime()) / one_day);
 }
 
+function getLinks() {
+    let linksJSON = localStorage.getItem("links");
+
+    if (linksJSON == null) {
+        localStorage["links"] = JSON.stringify(usefulLinks);
+        linksJSON = localStorage.getItem("links");
+    }
+    return JSON.parse(linksJSON);
+}
+
+let eventListenersNotSet = true;
+function setLinks() {
+    let linkElements = document.getElementsByClassName("link");
+    for (let index = 0; index < linkElements.length; index++) {
+        linkElements[index].innerHTML = links[index].name
+        if (eventListenersNotSet) {
+            linkElements[index].addEventListener("click", () => {
+                chrome.tabs.create({ url: links[index].link })
+            });
+        }
+    };
+    eventListenersNotSet = false;
+}
+
 function getOldToggleButtonsState() {
     let toggleButtonsStateJSON = localStorage.getItem("toggleHideShow");
 
@@ -51,9 +75,70 @@ function setToggleEventListeners() {
     }
 }
 
+function openLinksEditor() {
+    let editButton = document.getElementById("editLinks");
+    let editContainer = document.getElementById("edit_container");
+    let editLinkContainer = document.getElementById("edit_link_container");
+    let editItemButtons = document.getElementsByClassName("editItem");
+    let editLinkElements = document.getElementsByClassName("editLinkItem");
+    let applyButton = document.getElementById("applyButton");
+    let inputs = document.getElementsByClassName("text")
+    let linkNumber
+    let linkName
+    let linkURL
+
+    editContainer.addEventListener("transitionstart", () => {
+        setTimeout(() => {
+            for (let index = 0; index < editItemButtons.length; index++) {
+                editItemButtons[index].classList.toggle("editItemOpen")
+            };
+        }, 500)
+    });
+
+    editLinkContainer.addEventListener("transitionstart", () => {
+        setTimeout(() => {
+            for (let index = 0; index < editLinkElements.length; index++) {
+                editLinkElements[index].classList.toggle("editLinkItemOpen")
+            };
+        }, 600)
+    });
+
+
+    editButton.addEventListener("click", () => {
+        editContainer.classList.toggle("edit_container_open")
+    });
+
+    for (let index = 0; index < editItemButtons.length; index++) {
+        editItemButtons[index].addEventListener("click", () => {
+            editLinkContainer.classList.toggle("edit_link_container_open");
+            linkNumber = index
+            linkName = links[index].name
+            linkURL = links[index].link
+            inputs[0].value = linkName
+            inputs[1].value = linkURL
+        });
+    };
+
+    applyButton.addEventListener("click", () => {
+        let newInputs = document.getElementsByClassName("text");
+
+        links[linkNumber].name = newInputs[0].value
+        links[linkNumber].link = newInputs[1].value
+
+        localStorage.setItem("links", JSON.stringify(links));
+
+        setLinks()
+
+        editLinkContainer.classList.toggle("edit_link_container_open");
+    });
+}
 
 //------------------------------------------------------
 //--- Hide/Show buttons ---
+
+let links = getLinks();
+
+setLinks();
 
 let toggleButtonsState = getOldToggleButtonsState();
 
@@ -61,15 +146,7 @@ setContentVisibilityOnStart();
 
 setToggleEventListeners();
 
-
-//------------------------------------------------------
-//--- Useful links ---
-
-usefulLinks.forEach(element => {
-    document.getElementById(element.name).addEventListener("click", () => {
-        chrome.tabs.create({ url: element.link })
-    });
-});
+openLinksEditor();
 
 
 //------------------------------------------------------

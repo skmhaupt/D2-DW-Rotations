@@ -11,12 +11,12 @@ const setHideShowButtons = [
 //---------------------------------------------------------
 //--- Useful links data ---
 const usefulLinks = [
-    { name: "dim", link: "https://app.destinyitemmanager.com/" },
-    { name: "todayInDestiny", link: "https://www.todayindestiny.com/" },
-    { name: "d2ArmorPicker", link: "https://d2armorpicker.com/" },
-    { name: "lightgg", link: "https://www.light.gg/" },
-    { name: "trialsReport", link: "https://destinytrialsreport.com/" },
-    { name: "raidReport", link: "https://raid.report/" }
+    { name: "Dim", link: "https://app.destinyitemmanager.com/" },
+    { name: "Lightgg", link: "https://www.light.gg/" },
+    { name: "TodayInDestiny", link: "https://www.todayindestiny.com/" },
+    { name: "TrialsReport", link: "https://destinytrialsreport.com/" },
+    { name: "D2ArmorPicker", link: "https://d2armorpicker.com/" },
+    { name: "D2Foundry", link: "https://d2foundry.gg" },
 ];
 
 
@@ -76,12 +76,14 @@ const nightfalls = [
 ];
 
 const nightfallWeapons = [
-    "Warden's Law - Hand Cannon - Kinetic",
-    "Loaded Question - Fusion Rifle - Arc",
+    "Wild Style - Grenade Launcher - Solar",
     "Pre Astyanax IV - Combat Bow - Solar",
+    "The Slammer - Sword - Stasis",
     "Undercurrent - Grenade Launcher - Arc",
     "Uzume RR4 - Sniper Rifle - Solar",
-    "BrayTech Osprey - Rocket Launcher - Void"
+    "BrayTech Osprey - Rocket Launcher - Void",
+    "Warden's Law - Hand Cannon - Kinetic",
+    "Loaded Question - Fusion Rifle - Arc",
 ];
 
 //---------------------------------------------------------
