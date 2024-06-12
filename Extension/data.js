@@ -23,28 +23,42 @@ const usefulLinks = [
 //------------------------------------------------------
 //--- Dates ---
 
-var currentDate = new Date();
+function convertDateToUTC(date) { 
+    return new Date(date.getUTCFullYear(), 
+                    date.getUTCMonth(), 
+                    date.getUTCDate(), 
+                    date.getUTCHours(), 
+                    date.getUTCMinutes(), 
+                    date.getUTCSeconds()); 
+}
 
-var raidsStartDate = new Date(2024, 0, 2, 18);
+var date = new Date();
+var currentDate = convertDateToUTC(date);
 
-var dungeonsStartDate = new Date(2024, 0, 2, 18);
+date = Date.UTC(2024, 5, 4, 17, 0);
+var raidsStartDate = new Date(date);
 
-var nightfallssStartDate = new Date(2024, 0, 2, 18);
-var nightfallsWeaponsStartDate = new Date(2024, 0, 9, 18);
+date = Date.UTC(2024, 5, 4, 17, 0);
+var dungeonsStartDate = new Date(date);
 
-var lostSectorsStartDate = new Date(2024, 0, 8, 18);
-var lostSectorsExoticsStartDate = new Date(2024, 0, 11, 18);
-var lostSectorsWeaponsStartDate = new Date(2024, 0, 11, 18);
+date = Date.UTC(2024, 5, 4, 17, 0);
+var nightfallssStartDate = new Date(date);
+var nightfallsWeaponsStartDate = new Date(date);
+
+date = Date.UTC(2024, 5, 4, 17, 0);
+var lostSectorsStartDate = new Date(date);
+var lostSectorsExoticsStartDate = new Date(date);
+var lostSectorsWeaponsStartDate = new Date(date);
 
 
 //---------------------------------------------------------
 //--- Raids data ---
 
 const raids = [
-    { name: "King's Fall", location: "Legends" },
-    { name: "Root of Nightmares", location: "Neomuna" },
     { name: "Last Wish", location: "Dreaming City" },
     { name: "Garden of Salvation", location: "Moon" },
+    { name: "King's Fall", location: "Legends" },
+    { name: "Root of Nightmares", location: "Neomuna" },
     { name: "Deep Stone Crypt", location: "Europa" },
     { name: "Vault of Glass", location: "Legedns" },
     { name: "Vow of the Disciple", location: "Throne World" }
@@ -54,10 +68,10 @@ const raids = [
 //--- Dungeons data ---
 
 const dungeons = [
-    { name: "Grasp of Avarice", location: "Cosmodrome" },
-    { name: "Ghost of the Deep", location: "H.E.L.M." },
     { name: "Duality", location: "Moon" },
     { name: "Spire of the Watcher", location: "Mars" },
+    { name: "Grasp of Avarice", location: "Cosmodrome" },
+    { name: "Ghost of the Deep", location: "H.E.L.M." },
     { name: "Pit of Heresy", location: "Moon" },
     { name: "Shattered Throne", location: "Dreaming City" },
     { name: "Prophecy", location: "Legends" }
@@ -67,8 +81,8 @@ const dungeons = [
 //--- Nightfalls data ---
 
 const nightfalls = [
-    "Battleground - Moon",
-    "Battleground - Cosmodrome",
+    "The Glassway",
+    "Warden of Nothing",
     "Birthplace of the Vile",
     "Hypernet Current",
     "Lake of Shadows",
@@ -76,13 +90,13 @@ const nightfalls = [
 ];
 
 const nightfallWeapons = [
-    "Wild Style - Grenade Launcher - Solar",
+    "Warden's Law - Hand Cannon - Kinetic",
     "Pre Astyanax IV - Combat Bow - Solar",
+    "Wild Style - Grenade Launcher - Solar",
     "The Slammer - Sword - Stasis",
     "Undercurrent - Grenade Launcher - Arc",
     "Uzume RR4 - Sniper Rifle - Solar",
     "BrayTech Osprey - Rocket Launcher - Void",
-    "Warden's Law - Hand Cannon - Kinetic",
     "Loaded Question - Fusion Rifle - Arc",
 ];
 
@@ -90,10 +104,11 @@ const nightfallWeapons = [
 //--- Lost sectors data ---
 
 const lostSectorExotics = [
-    "Chest",
-    "Helm",
-    "Legs",
-    "Arms"
+    "Engram",
+    // "Chest",
+    // "Helm",
+    // "Legs",
+    // "Arms"
 ];
 
 const lostSectorWeapons = [
@@ -119,15 +134,15 @@ const lostSectorWeapons = [
 ];
 
 const lostSectors = [
-    { name: "Scavenger's Den", location: "Outskirts EDZ" },
-    { name: "Skydock IV", location: "Sunken Isles EDZ" },
-    { name: "The Quarry", location: "Sunken Isles EDZ" },
-    { name: "Aphelion's Rest", location: "The Strand Dereaming City" },
-    { name: "Bay of Drowned Wishes", location: "Divalian Mists Dereaming City" },
+    { name: "Perdition", location: "Cadmus Ridge - Europa" },
+    { name: "Bunker E15", location: "Eventide Ruins - Europa" },
+    { name: "Concealed Void", location: "Asterion Abyss - Europa" },
+    { name: "The Conflux", location: "The Cistern - Nessus" },
+    { name: "Thrilladrome", location: "Liming Harbor - Neomuna" },
+    { name: "Hydroponics Delta", location: "Zephyr Concourse - Neomuna" },
+    { name: "Veles Labyrinth", location: "Forgotten Shore - Cosmodrome" },
+    { name: "Exodus Garden 2A", location: "The Divide - Cosmodrome" },
     { name: "Chamber of Starlight", location: "Rheasilvia Dereaming City" },
-    { name: "Perdition", location: "Cadmus Ridge Europa" },
-    { name: "Bunker E15", location: "Eventide Ruins Europa" },
-    { name: "Concealed Void", location: "Asterion Abyss Europa" },
-    { name: "Thrilladrome", location: "Liming Harbor Neomuna" },
+    { name: "Scavenger's Den", location: "Outskirts EDZ" },
     { name: "Gilded Precept", location: "Ahimsa Park Neomuna" }
 ];

@@ -152,9 +152,12 @@ openLinksEditor();
 //------------------------------------------------------
 //--- Raids ---
 
+console.log(raidsStartDate)
+console.log(currentDate)
 var raidsWeeks = weeksBetween(raidsStartDate, currentDate);
 
 var raidsRotation = raidsWeeks % raids.length;
+
 
 document.getElementById("raid").getElementsByClassName("activity_name")[0].innerHTML += raids[raidsRotation].name;
 document.getElementById("raid").getElementsByClassName("activity_location")[0].innerHTML += raids[raidsRotation].location;
