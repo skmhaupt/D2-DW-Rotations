@@ -57,10 +57,10 @@ var lostSectorsWeaponsStartDate = new Date(date);
 const raids = [
     { name: "Last Wish", location: "Dreaming City" },
     { name: "Garden of Salvation", location: "Moon" },
-    { name: "King's Fall", location: "Legends" },
-    { name: "Root of Nightmares", location: "Neomuna" },
     { name: "Deep Stone Crypt", location: "Europa" },
     { name: "Vault of Glass", location: "Legedns" },
+    { name: "King's Fall", location: "Legends" },
+    { name: "Root of Nightmares", location: "Neomuna" },
     { name: "Vow of the Disciple", location: "Throne World" }
 ];
 
@@ -70,21 +70,21 @@ const raids = [
 const dungeons = [
     { name: "Duality", location: "Moon" },
     { name: "Spire of the Watcher", location: "Mars" },
+    { name: "Pit of Heresy", location: "Moon" },
+    { name: "Prophecy", location: "Legends" },
     { name: "Grasp of Avarice", location: "Cosmodrome" },
     { name: "Ghost of the Deep", location: "H.E.L.M." },
-    { name: "Pit of Heresy", location: "Moon" },
     { name: "Shattered Throne", location: "Dreaming City" },
-    { name: "Prophecy", location: "Legends" }
 ];
 
 //---------------------------------------------------------
 //--- Nightfalls data ---
 
 const nightfalls = [
-    "The Glassway",
+    "Hypernet Current",     // <-- need to check
     "Warden of Nothing",
-    "Birthplace of the Vile",
-    "Hypernet Current",
+    "The Disgraced",
+    "The Glassway",
     "Lake of Shadows",
     "The Corrupted"
 ];
@@ -93,6 +93,7 @@ const nightfallWeapons = [
     "Warden's Law - Hand Cannon - Kinetic",
     "Pre Astyanax IV - Combat Bow - Solar",
     "Wild Style - Grenade Launcher - Solar",
+    "Scintillation - Linear Fusion Rifle - Strand",
     "The Slammer - Sword - Stasis",
     "Undercurrent - Grenade Launcher - Arc",
     "Uzume RR4 - Sniper Rifle - Solar",
@@ -142,7 +143,7 @@ const lostSectors = [
     { name: "Hydroponics Delta", location: "Zephyr Concourse - Neomuna" },
     { name: "Veles Labyrinth", location: "Forgotten Shore - Cosmodrome" },
     { name: "Exodus Garden 2A", location: "The Divide - Cosmodrome" },
-    { name: "Chamber of Starlight", location: "Rheasilvia Dereaming City" },
-    { name: "Scavenger's Den", location: "Outskirts EDZ" },
+    { name: "The Broken Deep", location: "The Impasse - Pale Heart of the Traveler" },
+    { name: "The Blooming Deep", location: "The Blooming - Pale Heart of the Traveler" },
     { name: "Gilded Precept", location: "Ahimsa Park Neomuna" }
 ];
