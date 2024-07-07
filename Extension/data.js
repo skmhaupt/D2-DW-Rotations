@@ -59,9 +59,9 @@ const raids = [
     { name: "Garden of Salvation", location: "Moon" },
     { name: "Deep Stone Crypt", location: "Europa" },
     { name: "Vault of Glass", location: "Legedns" },
+    { name: "Vow of the Disciple", location: "Throne World" },
     { name: "King's Fall", location: "Legends" },
     { name: "Root of Nightmares", location: "Neomuna" },
-    { name: "Vow of the Disciple", location: "Throne World" }
 ];
 
 //---------------------------------------------------------
@@ -72,9 +72,9 @@ const dungeons = [
     { name: "Spire of the Watcher", location: "Mars" },
     { name: "Pit of Heresy", location: "Moon" },
     { name: "Prophecy", location: "Legends" },
+    { name: "Shattered Throne", location: "Dreaming City" },
     { name: "Grasp of Avarice", location: "Cosmodrome" },
     { name: "Ghost of the Deep", location: "H.E.L.M." },
-    { name: "Shattered Throne", location: "Dreaming City" },
 ];
 
 //---------------------------------------------------------
@@ -82,10 +82,10 @@ const dungeons = [
 
 const nightfalls = [
     "Hypernet Current",     // <-- need to check
-    "Warden of Nothing",
+    "Lake of Shadows",      // <-- need to check
     "The Disgraced",
     "The Glassway",
-    "Lake of Shadows",
+    "Warden of Nothing",
     "The Corrupted"
 ];
 
@@ -94,6 +94,7 @@ const nightfallWeapons = [
     "Pre Astyanax IV - Combat Bow - Solar",
     "Wild Style - Grenade Launcher - Solar",
     "Scintillation - Linear Fusion Rifle - Strand",
+    "Shadow Price - Auto Rifle - Arc",
     "The Slammer - Sword - Stasis",
     "Undercurrent - Grenade Launcher - Arc",
     "Uzume RR4 - Sniper Rifle - Solar",
@@ -112,26 +113,43 @@ const lostSectorExotics = [
     // "Arms"
 ];
 
+// const oldlostSectorWeapons = [
+//     day1 = ["Nox Perennial V - Fusion Rifle - Strand",
+//         "Old Sterling - Auto Rifle - Strand",
+//         "Marsilion-C - Grenade Launcher - Solar",
+//         "Senuna SI6 - Sidearm - Stasis"],
+
+//     day2 = ["Psi Hermetic V - Pulse Rifle - Stasis",
+//         "Glissando-47 - Scout Rifle - Strande",
+//         "Irukandji - Sniper Rifle - Stasis",
+//         "Nasreddin - Sword - Arc"],
+
+//     day3 = ["Heliocentric QSc - Sidearm - Solar",
+//         "Last Foray - Sniper Rifle - Solar",
+//         "Hand in Hand - Shotgun - Arc",
+//         "Battle Scar - Pulse Rifle - Kinetic"],
+
+//     day4 = ["Geodetic HSm - Sword - Void",
+//         "Combined Action - Hand Cannon - Arc",
+//         "Harsh Language -Grenade Launcher - Void",
+//         "Coronach-22 - Auto Rifle - Solar"]
+// ];
+
 const lostSectorWeapons = [
-    day1 = ["Nox Perennial V - Fusion Rifle - Strand",
-        "Old Sterling - Auto Rifle - Strand",
-        "Marsilion-C - Grenade Launcher - Solar",
-        "Senuna SI6 - Sidearm - Stasis"],
-
-    day2 = ["Psi Hermetic V - Pulse Rifle - Stasis",
-        "Glissando-47 - Scout Rifle - Strande",
-        "Irukandji - Sniper Rifle - Stasis",
-        "Nasreddin - Sword - Arc"],
-
-    day3 = ["Heliocentric QSc - Sidearm - Solar",
-        "Last Foray - Sniper Rifle - Solar",
-        "Hand in Hand - Shotgun - Arc",
-        "Battle Scar - Pulse Rifle - Kinetic"],
-
-    day4 = ["Geodetic HSm - Sword - Void",
+    day1 = ["Parabellum - Submachine Gun - Solar",
         "Combined Action - Hand Cannon - Arc",
-        "Harsh Language -Grenade Launcher - Void",
-        "Coronach-22 - Auto Rifle - Solar"]
+        "Last Foray - Sniper Rifle - Solar",
+        "Old Sterling - Auto Rifle - Strand"],
+
+    day2 = ["Marcota-45 - Machine Gun - Strand",
+        "Geodetic HSm - Sword - Void",
+        "Glissando-47 - Scout Rifle - Strande",
+        "Heliocentric QSc - Sidearm - Solar"],
+    
+    day3 = ["Ros Arago IV - Auto Rifle - Void",
+        "Crux Termination IV - Rocket Launcher - Arc",
+        "Nox Perennial V - Fusion Rifle - Strand",
+        "Psi Hermetic V - Pulse Rifle - Stasis"],
 ];
 
 const lostSectors = [
@@ -145,5 +163,5 @@ const lostSectors = [
     { name: "Exodus Garden 2A", location: "The Divide - Cosmodrome" },
     { name: "The Broken Deep", location: "The Impasse - Pale Heart of the Traveler" },
     { name: "The Blooming Deep", location: "The Blooming - Pale Heart of the Traveler" },
-    { name: "Gilded Precept", location: "Ahimsa Park Neomuna" }
+    { name: "The Forgotten Deep", location: "The Landing - Pale Heart of the Traveler" },
 ];
