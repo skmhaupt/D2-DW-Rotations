@@ -1,15 +1,27 @@
 //------------------------------------------------------
 //--- Functions ---
+let tolerance = 0.98
 
 function weeksBetween(d1, d2) {
     let one_week = 1000 * 60 * 60 * 24 * 7;
-    return Math.floor((d2.getTime() - d1.getTime()) / one_week);
+    let a = Math.floor((d2.getTime() - d1.getTime()) / one_week);
+    let b= (d2.getTime() - d1.getTime()) / one_week;
+    if ((b - a) >= tolerance) {
+        a += 1
+    }
+    return a
 }
 
 function daysBetween(d1, d2) {
     let one_day = 1000 * 60 * 60 * 24;
-    return Math.floor((d2.getTime() - d1.getTime()) / one_day);
+    let a = Math.floor((d2.getTime() - d1.getTime()) / one_day);
+    let b = (d2.getTime() - d1.getTime()) / one_day;
+    if ((b - a) >= tolerance) {
+        a += 1
+    }
+    return a
 }
+
 
 function getLinks() {
     let linksJSON = localStorage.getItem("links");
@@ -152,8 +164,6 @@ openLinksEditor();
 //------------------------------------------------------
 //--- Raids ---
 
-console.log(raidsStartDate)
-console.log(currentDate)
 var raidsWeeks = weeksBetween(raidsStartDate, currentDate);
 
 var raidsRotation = raidsWeeks % raids.length;
@@ -205,7 +215,7 @@ document.getElementById("nightfall").getElementsByClassName("loot")[0].innerHTML
 var lostSectorsDays = daysBetween(lostSectorsStartDate, currentDate);
 var lostSectorsExoticsDays = daysBetween(lostSectorsExoticsStartDate, currentDate);
 var lostSectorsWeaponsDays = daysBetween(lostSectorsWeaponsStartDate, currentDate);
-
+console.log("lost sec day", lostSectorsDays)
 var lostSectorsRotation = lostSectorsDays % lostSectors.length;
 var lostSectorsExoticsRotation = lostSectorsExoticsDays % lostSectorExotics.length;
 var lostSectorsWorldWeaponsRotation = lostSectorsWeaponsDays % lostSectorWeapons.length;

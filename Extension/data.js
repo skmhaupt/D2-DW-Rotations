@@ -45,7 +45,7 @@ date = Date.UTC(2024, 5, 4, 17, 0);
 var nightfallssStartDate = new Date(date);
 var nightfallsWeaponsStartDate = new Date(date);
 
-date = Date.UTC(2024, 5, 4, 17, 0);
+date = Date.UTC(2024, 6, 7, 17, 0);
 var lostSectorsStartDate = new Date(date);
 var lostSectorsExoticsStartDate = new Date(date);
 var lostSectorsWeaponsStartDate = new Date(date);
@@ -83,10 +83,10 @@ const dungeons = [
 const nightfalls = [
     "Hypernet Current",     // <-- need to check
     "Lake of Shadows",      // <-- need to check
-    "The Disgraced",
-    "The Glassway",
-    "Warden of Nothing",
-    "The Corrupted"
+    "The Corrupted",        // <-- need to check
+    "The Glassway",         // <-- need to check
+    "Warden of Nothing",    // correct
+    "The Disgraced",        // correct
 ];
 
 const nightfallWeapons = [
@@ -95,9 +95,9 @@ const nightfallWeapons = [
     "Wild Style - Grenade Launcher - Solar",
     "Scintillation - Linear Fusion Rifle - Strand",
     "Shadow Price - Auto Rifle - Arc",
+    "Uzume RR4 - Sniper Rifle - Solar",
     "The Slammer - Sword - Stasis",
     "Undercurrent - Grenade Launcher - Arc",
-    "Uzume RR4 - Sniper Rifle - Solar",
     "BrayTech Osprey - Rocket Launcher - Void",
     "Loaded Question - Fusion Rifle - Arc",
 ];
